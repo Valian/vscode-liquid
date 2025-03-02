@@ -1,0 +1,61 @@
+{
+    "name": "liquid-sigil",
+    "displayName": "Liquid Sigil",
+    "description": "Syntax highlighting support for Liquid in Elixir sigils",
+    "version": "0.1.0",
+    "author": "Jakub Skalecki",
+    "publisher": "Valian",
+    "license": "MIT",
+    "icon": "images/logo.png",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Valian/vscode-liquid.git"
+    },
+    "engines": {
+        "vscode": "^1.25.1"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onLanguage:elixir"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "liquid",
+                "aliases": [
+                    "Liquid",
+                    "liquid"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "liquid",
+                "scopeName": "text.html.liquid",
+                "path": "./syntaxes/liquid.json"
+            },
+            {
+                "scopeName": "source.elixir.liquid",
+                "path": "./syntaxes/elixir-liquid.json",
+                "injectTo": [
+                    "source.elixir"
+                ],
+                "embeddedLanguages": {
+                    "text.html.liquid": "liquid"
+                }
+            }
+        ]
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "bugs": {
+        "url": "https://github.com/Valian/vscode-liquid/issues"
+    },
+    "homepage": "https://github.com/Valian/vscode-liquid#readme"
+}

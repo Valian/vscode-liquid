@@ -1,0 +1,144 @@
+{
+  "name": "Liquid",
+  "scopeName": "text.html.liquid",
+  "fileTypes": [],
+  "patterns": [
+    {
+      "include": "#liquid_tags"
+    },
+    {
+      "include": "#liquid_output"
+    },
+    {
+      "include": "#plain_text"
+    },
+    {
+      "include": "text.html.basic"
+    }
+  ],
+  "repository": {
+    "plain_text": {
+      "name": "markup.raw.liquid-text",
+      "match": "[^{]+|{(?!{|%)",
+      "patterns": []
+    },
+    "liquid_tags": {
+      "name": "meta.tag.liquid",
+      "begin": "{%",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.tag.begin.liquid"
+        }
+      },
+      "end": "%}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.tag.end.liquid"
+        }
+      },
+      "patterns": [
+        {
+          "match": "\\b(if|elsif|else|endif|unless|endunless|case|when|endcase|for|endfor|break|continue|in|do|comment|endcomment|raw|endraw|assign|capture|endcapture|increment|decrement|render)\\b",
+          "name": "keyword.control.liquid"
+        },
+        {
+          "match": "\\b(true|false|nil)\\b",
+          "name": "constant.language.liquid"
+        },
+        {
+          "match": "\\b(and|or|not|contains)\\b",
+          "name": "keyword.operator.logical.liquid"
+        },
+        {
+          "match": "==|!=|<|>|<=|>=",
+          "name": "keyword.operator.comparison.liquid"
+        },
+        {
+          "match": "\\|",
+          "name": "keyword.operator.filter.liquid"
+        },
+        {
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b",
+          "name": "variable.other.liquid"
+        },
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.liquid",
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escape.liquid"
+            }
+          ]
+        },
+        {
+          "begin": "'",
+          "end": "'",
+          "name": "string.quoted.single.liquid",
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escape.liquid"
+            }
+          ]
+        },
+        {
+          "match": "\\b\\d+\\b",
+          "name": "constant.numeric.liquid"
+        }
+      ]
+    },
+    "liquid_output": {
+      "name": "meta.output.liquid",
+      "begin": "{{",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.output.begin.liquid"
+        }
+      },
+      "end": "}}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.output.end.liquid"
+        }
+      },
+      "patterns": [
+        {
+          "match": "\\|",
+          "name": "keyword.operator.filter.liquid"
+        },
+        {
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b",
+          "name": "variable.other.liquid"
+        },
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.liquid",
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escape.liquid"
+            }
+          ]
+        },
+        {
+          "begin": "'",
+          "end": "'",
+          "name": "string.quoted.single.liquid",
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escape.liquid"
+            }
+          ]
+        },
+        {
+          "match": "\\b\\d+\\b",
+          "name": "constant.numeric.liquid"
+        }
+      ]
+    }
+  }
+}

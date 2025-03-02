@@ -1,0 +1,39 @@
+// Add these settings to your VS Code settings.json file
+// (File > Preferences > Settings > Edit in settings.json)
+// to customize the colors of your liquid sigils
+{
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "markup.raw.liquid-text",
+        "settings": {
+          "foreground": "#C678DD" // Purple color for normal text
+        }
+      },
+      {
+        "scope": "variable.other.liquid",
+        "settings": {
+          "foreground": "#E5C07B" // Yellow color for variables
+        }
+      },
+      {
+        "scope": "keyword.control.liquid",
+        "settings": {
+          "foreground": "#61AFEF" // Blue for control keywords
+        }
+      },
+      {
+        "scope": "meta.output.liquid",
+        "settings": {
+          "foreground": "#98C379" // Green for output tags
+        }
+      },
+      {
+        "scope": "keyword.other.sigil.elixir",
+        "settings": {
+          "foreground": "#E06C75" // Red for sigil name
+        }
+      }
+    ]
+  }
+} 

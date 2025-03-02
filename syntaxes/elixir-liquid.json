@@ -1,0 +1,146 @@
+{
+  "injectionSelector": "L:source.elixir -comment -text -string",
+  "name": "elixir-liquid",
+  "patterns": [
+    {
+      "comment": "LIQUID sigil with heredoc (double quotes)",
+      "name": "text.html.liquid",
+      "begin": "(~LIQUID)(\"\"\")$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.sigil.elixir"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.elixir"
+        }
+      },
+      "end": "^\\s*(\"\"\"([a-z]*)?)$",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.end.elixir"
+        },
+        "2": {
+          "name": "keyword.other.sigil.modifiers.elixir"
+        }
+      },
+      "contentName": "meta.embedded.block.liquid",
+      "patterns": [
+        {
+          "include": "text.html.liquid"
+        }
+      ]
+    },
+    {
+      "comment": "LIQUID sigil with double quotes",
+      "name": "text.html.liquid",
+      "begin": "(~LIQUID)(\")",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.sigil.elixir"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.elixir"
+        }
+      },
+      "end": "\"([a-z]*)?",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.elixir"
+        },
+        "1": {
+          "name": "keyword.other.sigil.modifiers.elixir"
+        }
+      },
+      "contentName": "meta.embedded.block.liquid",
+      "patterns": [
+        {
+          "include": "text.html.liquid"
+        }
+      ]
+    },
+    {
+      "comment": "LIQUID sigil with square brackets",
+      "name": "text.html.liquid",
+      "begin": "(~LIQUID)(\\[)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.sigil.elixir"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.elixir"
+        }
+      },
+      "end": "\\]([a-z]*)?",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.elixir"
+        },
+        "1": {
+          "name": "keyword.other.sigil.modifiers.elixir"
+        }
+      },
+      "contentName": "meta.embedded.block.liquid",
+      "patterns": [
+        {
+          "include": "text.html.liquid"
+        }
+      ]
+    },
+    {
+      "comment": "LIQUID sigil with parentheses",
+      "name": "text.html.liquid",
+      "begin": "(~LIQUID)(\\()",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.sigil.elixir"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.elixir"
+        }
+      },
+      "end": "\\)([a-z]*)?",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.elixir"
+        },
+        "1": {
+          "name": "keyword.other.sigil.modifiers.elixir"
+        }
+      },
+      "contentName": "meta.embedded.block.liquid",
+      "patterns": [
+        {
+          "include": "text.html.liquid"
+        }
+      ]
+    },
+    {
+      "comment": "LIQUID sigil with curly brackets",
+      "name": "text.html.liquid",
+      "begin": "(~LIQUID)(\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.sigil.elixir"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.elixir"
+        }
+      },
+      "end": "\\}([a-z]*)?",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.elixir"
+        },
+        "1": {
+          "name": "keyword.other.sigil.modifiers.elixir"
+        }
+      },
+      "contentName": "meta.embedded.block.liquid",
+      "patterns": [
+        {
+          "include": "text.html.liquid"
+        }
+      ]
+    }
+  ]
+}
