@@ -19,7 +19,7 @@
   "repository": {
     "plain_text": {
       "name": "markup.raw.liquid-text",
-      "match": "[^{%}]+",
+      "match": "[^{%\"\\]\\)\\}]+",
       "patterns": []
     },
     "liquid_tags": {
