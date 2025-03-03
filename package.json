@@ -4,7 +4,7 @@
     "description": "Syntax highlighting support for Liquid in Elixir sigils",
     "version": "0.1.0",
     "author": "Jakub Skalecki",
-    "publisher": "Valian",
+    "publisher": "JakubSkalecki",
     "license": "MIT",
     "icon": "images/logo.png",
     "repository": {
