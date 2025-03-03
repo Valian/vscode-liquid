@@ -5,7 +5,7 @@
 function activate(context) {
   // This extension provides only syntax highlighting via JSON grammars
   // No additional activation code is needed
-  console.log('Liquid sigil extension is now active')
+  console.log("Liquid sigil extension is now active");
 }
 
 function deactivate() {
@@ -15,4 +15,4 @@ function deactivate() {
 module.exports = {
   activate,
   deactivate,
-}
+};

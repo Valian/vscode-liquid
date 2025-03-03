@@ -10,16 +10,16 @@
       "include": "#liquid_output"
     },
     {
-      "include": "#plain_text"
+      "include": "text.html.basic"
     },
     {
-      "include": "text.html.basic"
+      "include": "#plain_text"
     }
   ],
   "repository": {
     "plain_text": {
       "name": "markup.raw.liquid-text",
-      "match": "[^{]+|{(?!{|%)",
+      "match": "[^{%}]+",
       "patterns": []
     },
     "liquid_tags": {
